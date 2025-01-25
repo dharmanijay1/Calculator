@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .calculator {
+      background: #222;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      width: 320px;
+      padding: 20px;
+    }
+
+    .display {
+      background: #333;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 2rem;
+      padding: 15px;
+      text-align: right;
+      margin-bottom: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      background: #444;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1.5rem;
+      padding: 15px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background: #666;
+      transform: scale(1.05);
+    }
+
+    button:active {
+      background: #888;
+    }
+
+    .button-special {
+      background: #6a11cb;
+    }
+
+    .button-special:hover {
+      background: #7b20dc;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" class="display" id="display" >
+    <div class="buttons">
+      <button id="7">7</button>
+      <button id="8">8</button>
+      <button id="9">9</button>
+      <button class="button-special" id="goli">C</button>
+
+      <button id="4">4</button>
+      <button id="5">5</button>
+      <button id="6">6</button>
+      <button id="sum">+</button>
+
+      <button id="1">1</button>
+      <button id="2">2</button>
+      <button id="3">3</button>
+      <button id="sub">-</button>
+
+      <button id="0">0</button>
+      <button id="dot">.</button>
+      <button class="button-special" id="equal">=</button>
+      <button id="pro">*</button>
+
+      <button class="button-special" id="div">/</button>
+      <button onclick="cut()" class="button-special" id="cut"></button>
+    </div>
+  </div>
+  <script src = "./script.js"></script>
+</body>
+</html>
